@@ -1,0 +1,328 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+
+/* Navigation */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:rgba(0,0,0,.5);
+    backdrop-filter:blur(10px);
+
+    z-index:100;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#38bdf8;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#38bdf8;
+}
+
+
+/* Hero */
+
+.hero{
+
+    height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+    url("hero.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+}
+
+
+.overlay h1{
+
+    font-size:120px;
+    line-height:1.1;
+    letter-spacing:4px;
+
+    text-shadow:4px 4px 20px rgba(0,0,0,.8);
+
+    margin-bottom:25px;
+}
+
+
+.overlay p{
+
+    font-size:28px;
+
+    line-height:1.8;
+}
+
+
+button{
+
+    margin-top:40px;
+
+    padding:15px 40px;
+
+    border:none;
+
+    border-radius:40px;
+
+    font-size:18px;
+
+    background:#38bdf8;
+
+    cursor:pointer;
+
+    transition:.4s;
+}
+
+button:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+/* About */
+
+.about{
+
+    padding:120px 10%;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:70px;
+}
+
+
+.about img{
+
+    width:450px;
+
+    border-radius:20px;
+}
+
+
+.about-text{
+
+    line-height:2;
+
+    font-size:18px;
+}
+
+
+.about h2,
+.mission h2,
+.impact h2,
+.gallery h2,
+.contact h2{
+
+    text-align:center;
+
+    font-size:45px;
+
+    margin-bottom:60px;
+}
+
+
+/* Mission */
+
+.mission{
+
+    padding:100px 10%;
+}
+
+
+.cards{
+
+    display:flex;
+
+    gap:30px;
+}
+
+
+.card{
+
+    background:#1e293b;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    transition:.4s;
+}
+
+
+.card:hover{
+
+    transform:translateY(-10px);
+}
+
+
+/* Impact */
+
+.impact{
+
+    padding:100px 10%;
+
+    text-align:center;
+}
+
+
+.numbers{
+
+    display:flex;
+
+    justify-content:space-around;
+}
+
+
+.numbers h1{
+
+    color:#38bdf8;
+
+    font-size:60px;
+}
+
+
+/* Gallery */
+
+.gallery{
+
+    padding:100px 10%;
+
+    text-align:center;
+}
+
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+}
+
+
+.gallery img{
+
+    width:100%;
+
+    border-radius:20px;
+
+    transition:.5s;
+}
+
+
+.gallery img:hover{
+
+    transform:scale(1.05);
+}
+
+
+/* Contact */
+
+.contact{
+
+    padding:100px 10%;
+
+    text-align:center;
+
+    line-height:2;
+
+    font-size:20px;
+}
+
+
+/* Footer */
+
+footer{
+
+    background:black;
+
+    padding:30px;
+
+    text-align:center;
+}
+
+
+/* Responsive */
+
+@media(max-width:900px){
+
+    .about{
+
+        flex-direction:column;
+    }
+
+    .cards{
+
+        flex-direction:column;
+    }
+
+    .numbers{
+
+        flex-direction:column;
+
+        gap:40px;
+    }
+
+    .gallery-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .overlay h1{
+
+        font-size:70px;
+    }
+
+    .overlay p{
+
+        font-size:20px;
+    }
+
+}
